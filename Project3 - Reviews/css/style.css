@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/* Body Styles */
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	background-color: #f1f5f8;
+}
+
+/* Header Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	line-height: 1.2;
+}
+
+p {
+	margin: 0;
+}
+
+/* main */
+main {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main__wrapper {
+	max-width: 600px;
+	width: 100%;
+	display: grid;
+	justify-items: center;
+}
+
+.main__text {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+.main__text h1 {
+	font-size: 36px;
+	text-transform: uppercase;
+	padding: 5px;
+}
+
+.main__text--underline {
+	height: 3px;
+	width: 80%;
+	border: 10px;
+	background-color: #1da1f2;
+	margin: 0 auto;
+}
+
+.main__box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 20px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.box__img {
+	position: relative;
+	width: 120px;
+	height: 120px;
+	margin: 0 auto;
+}
+
+.box__img img {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.box__img:before {
+	position: absolute;
+	content: "";
+	display: block;
+	bottom: -5px;
+	right: -5px;
+	width: 120px;
+	height: 120px;
+	background-color: #1da1f2;
+	border-radius: 50%;
+}
+
+.box__img:after {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	position: absolute;
+	content: "\f10d";
+	bottom: 5px;
+	left: 5px;
+	width: 40px;
+	height: 40px;
+	background-color: #1da1f2;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+.main__info {
+	display: grid;
+	place-items: center;
+	margin-top: 20px;
+}
+
+.info__title {
+	font-size: 26px;
+	letter-spacing: 5px;
+	color: #a2a8a3;
+	text-transform: uppercase;
+}
+
+.info__job {
+	text-transform: uppercase;
+	color: #1da1f2;
+	font-weight: 900;
+	position: relative;
+}
+
+.info__job::after {
+	position: absolute;
+	content: "";
+	display: block;
+	width: 2px;
+	height: 100%;
+	background-color: #1da1f2;
+	top: 0;
+	right: -10px;
+}
+
+.info__job::before {
+	position: absolute;
+	content: "";
+	display: block;
+	width: 2px;
+	height: 100%;
+	background-color: #1da1f2;
+	top: 0;
+	left: -10px;
+}
+
+.info__text {
+	margin: 15px 0;
+	font-size: 14px;
+	width: 85%;
+	text-align: center;
+}
+
+.main__button {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 50%;
+}
+
+.main__button button {
+	border: none;
+	background-color: transparent;
+	font-size: 32px;
+	padding: 10px;
+	outline: 0;
+	display: flex;
+	border-color: transparent;
+	cursor: pointer;
+}
