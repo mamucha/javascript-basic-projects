@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/* Body Styles */
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	background-color: #f1f5f8;
+}
+
+/* Header Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	line-height: 1.2;
+}
+
+/* main */
+main {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main__text {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+.main__text h1 {
+	font-size: 60px;
+	text-transform: uppercase;
+	padding: 10px;
+}
+
+.main__count {
+	position: relative;
+	font-size: 96px;
+	text-align: center;
+}
+
+.main__button {
+	padding: 8px 12px;
+	border: 2px solid black;
+	border-radius: 5px;
+	text-transform: uppercase;
+	background: transparent;
+	font-weight: 700;
+	letter-spacing: 4px;
+	background: transparent;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+}
+
+.main__button:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.decrase {
+	animation: decreaseAnimate 1s;
+}
+
+.increase {
+	animation: increaseAnimate 1s;
+}
+
+@keyframes decreaseAnimate {
+	0% {
+		right: 80px;
+		opacity: 0;
+	}
+
+	100% {
+		right: 0px;
+	}
+}
+
+@keyframes increaseAnimate {
+	0% {
+		left: 80px;
+		opacity: 0;
+	}
+
+	100% {
+		left: 0px;
+	}
+}
