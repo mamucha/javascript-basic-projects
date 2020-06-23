@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/* variables */
+:root {
+	--bcg-grey: #f1f5f8;
+	--bcg-white: #fff;
+	--color-text: #1da1f2;
+	--transition: all 0.3s linear;
+	--spacing: 0.25rem;
+	--radius: 0.5rem;
+	--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	--max-width: 1170px;
+}
+
+/* Body Styles */
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	background-color: var(--bcg-grey);
+}
+
+/* Header Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	line-height: 1.2;
+}
+
+p,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/* navbar */
+.menu {
+	width: 100%;
+	z-index: 2;
+	background-color: var(--bcg-white);
+	box-shadow: var(--dark-shadow);
+}
+
+.menu__wrapper {
+	max-width: 1200px;
+	padding: 20px;
+}
+
+.menu__logo {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.menu__list {
+	background-color: var(--bcg-white);
+	max-height: 0;
+	overflow: hidden;
+	transition: var(--transition);
+	list-style: none;
+}
+
+.menu__list--open {
+	border-top: 1px solid black;
+	max-height: 200px;
+	margin-top: 10px;
+	background-color: var(--bcg-white);
+}
+
+.menu__item {
+	cursor: pointer;
+}
+
+.menu__link {
+	text-decoration: none;
+	transition: var(--transition);
+	display: block;
+	padding: 10px;
+	color: #000;
+}
+
+.menu__link:hover {
+	color: var(--color-text);
+	padding-left: 20px;
+}
+
+.menu__social {
+	display: none;
+}
+
+.social__link {
+	color: #000;
+	list-style: none;
+	padding: 0 10px;
+	transition: var(--transition);
+}
+
+.social__link:hover {
+	color: var(--color-text);
+}
+
+.menu__hamburger {
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	font-size: 26px;
+	outline: 0;
+	transition: var(--transition);
+}
+
+.menu__hamburger:active {
+	transform: rotate(180deg);
+}
+
+@media only screen and (min-width: 800px) {
+	.menu__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.menu__hamburger {
+		display: none;
+	}
+
+	.menu__list {
+		max-height: none;
+		display: flex;
+	}
+
+	.menu__list--open {
+		border-top: none;
+		margin-top: 0;
+	}
+
+	.menu__link {
+		padding: 0 10px;
+	}
+
+	.menu__link:hover {
+		padding-left: 10px;
+	}
+
+	.menu__social {
+		display: flex;
+	}
+}
