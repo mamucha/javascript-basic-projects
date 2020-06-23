@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/* variables */
+:root {
+	--bcg-grey: #f1f5f8;
+	--bcg-white: #fff;
+	--color-text: #1da1f2;
+	--transition: all 0.3s linear;
+	--spacing: 0.25rem;
+	--radius: 0.5rem;
+	--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	--max-width: 1170px;
+}
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	background-color: var(--bcg-grey);
+}
+
+/* Header Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	line-height: 1.2;
+}
+
+p,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/* navbar */
+.main {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: url("../images/bcg.jpeg") center center/cover no-repeat;
+}
+
+.main__wrapper {
+	background-color: var(--bcg-white);
+	max-width: 600px;
+	width: 90%;
+	padding: 50px 0;
+	display: grid;
+	place-items: center;
+	gap: 50px;
+	box-shadow: var(--dark-shadow);
+	border-radius: 10px;
+}
+
+.main__title {
+	font-size: 56px;
+}
+
+.main__button {
+	text-transform: uppercase;
+	border: 2px solid var(--color-text);
+	background-color: var(--color-text);
+	padding: 12px 10px;
+	letter-spacing: 4px;
+	color: var(--bcg-white);
+	outline: 0;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.main__button:hover {
+	background-color: var(--bcg-white);
+	color: #000;
+}
+
+.main__hide {
+	opacity: 0;
+	background-color: rgba(73, 166, 233, 0.5);
+}
+
+.modal {
+	position: fixed;
+	opacity: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--bcg-white);
+	max-width: 620px;
+	width: 90%;
+	padding: 70px 0;
+	display: grid;
+	place-items: center;
+	box-shadow: var(--dark-shadow);
+	border-radius: 10px;
+	z-index: -1;
+}
+
+.modal__visibility {
+	z-index: 2;
+	opacity: 1;
+}
+
+.modal__close {
+	position: absolute;
+	top: 10%;
+	right: 5%;
+	border: none;
+	outline: 0;
+	font-size: 26px;
+	color: var(--color-text);
+	background-color: transparent;
+	transition: var(--transition);
+	cursor: pointer;
+}
+
+.modal__close:hover {
+	transform: rotate(180deg);
+}
