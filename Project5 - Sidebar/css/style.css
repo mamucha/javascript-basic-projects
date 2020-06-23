@@ -12,6 +12,14 @@
 	--max-width: 1170px;
 }
 
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 /* Body Styles */
 body {
 	margin: 0;
@@ -41,14 +49,18 @@ ul {
 
 /* navbar */
 .menu {
-	width: 100%;
-	z-index: 2;
+	position: fixed;
 	background-color: var(--bcg-white);
-	box-shadow: var(--dark-shadow);
+	height: 100vh;
+	transform: translateX(-100%);
+	transition: var(--transition);
 }
 
 .menu__wrapper {
-	max-width: 1200px;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	gap: 20px;
+	height: 100%;
 	padding: 20px;
 }
 
@@ -56,21 +68,6 @@ ul {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-}
-
-.menu__list {
-	background-color: var(--bcg-white);
-	max-height: 0;
-	overflow: hidden;
-	transition: var(--transition);
-	list-style: none;
-}
-
-.menu__list--open {
-	border-top: 1px solid black;
-	max-height: 200px;
-	margin-top: 10px;
-	background-color: var(--bcg-white);
 }
 
 .menu__item {
@@ -91,7 +88,11 @@ ul {
 }
 
 .menu__social {
-	display: none;
+	font-size: 26px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 40px;
 }
 
 .social__link {
@@ -106,6 +107,7 @@ ul {
 }
 
 .menu__hamburger {
+	position: fixed;
 	border: none;
 	background: transparent;
 	cursor: pointer;
@@ -114,41 +116,46 @@ ul {
 	transition: var(--transition);
 }
 
-.menu__hamburger:active {
+.menu__hamburger:hover {
 	transform: rotate(180deg);
 }
 
-@media only screen and (min-width: 800px) {
-	.menu__wrapper {
-margin: 0 auto;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
+.menu__hamburger--open {
+	font-size: 36px;
+	top: 50px;
+	right: 50px;
+	animation: animate 1s infinite;
+}
 
-	.menu__hamburger {
-		display: none;
-	}
+.menu__hamburger--close {
+	position: relative;
+}
 
-	.menu__list {
-		max-height: none;
-		display: flex;
+@keyframes animate {
+	0% {
+		transform: scale(1);
 	}
-
-	.menu__list--open {
-		border-top: none;
-		margin-top: 0;
+	50% {
+		transform: scale(1.8);
 	}
-
-	.menu__link {
-		padding: 0 10px;
+	50.01% {
+		transform: scale(1.8);
 	}
-
-	.menu__link:hover {
-		padding-left: 10px;
+	100% {
+		transform: scale(1);
 	}
+}
 
-	.menu__social {
-		display: flex;
+/* media queries */
+
+@media only screen and (min-width: 640px) {
+	.menu {
+		width: 50%;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.menu {
+		width: 30%;
 	}
 }
