@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/* variables */
+:root {
+	--bcg-grey: #f1f5f8;
+	--bcg-white: #fff;
+	--color-text: #1da1f2;
+	--transition: all 0.3s linear;
+	--spacing: 0.25rem;
+	--radius: 0.5rem;
+	--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	--max-width: 1170px;
+}
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	background-color: var(--bcg-grey);
+
+	/* height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center; */
+}
+
+/* Header Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	line-height: 1.2;
+}
+
+p,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/* header */
+header {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
+		url("../images/hero-bcg.jpeg") center/cover no-repeat;
+}
+
+.header__container {
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.main__header {
+	width: 90%;
+	text-align: center;
+	color: #fff;
+}
+
+.main__header h1 {
+	text-transform: uppercase;
+	font-size: 42px;
+	letter-spacing: var(--spacing);
+}
+
+.main__header p {
+	line-height: 1.5;
+	margin: 15px 0;
+}
+
+.button__link {
+	display: inline-block;
+	color: #fff;
+	padding: 10px;
+	border: 1px solid #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: var(--spacing);
+	transition: var(--transition);
+}
+
+.button__link:hover {
+	background-color: #fff;
+	color: var(--color-text);
+}
+
+.menu {
+	width: 100%;
+	background-color: var(--bcg-white);
+	box-shadow: var(--dark-shadow);
+}
+
+.menu__wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 90%;
+	padding: 15px 20px;
+}
+
+.menu__logo {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.menu__list {
+	max-height: 0;
+	transition: var(--transition);
+	overflow: hidden;
+}
+
+.menu__list--open {
+	max-height: 200px;
+	border-top: 1px solid black;
+	margin-top: 15px;
+}
+
+.menu__item {
+	cursor: pointer;
+}
+
+.menu__link {
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: var(--transition);
+	display: block;
+	padding: 10px;
+	color: #000;
+	transition: var(--transition);
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.menu__link:hover {
+	padding-left: 20px;
+	color: var(--color-text);
+}
+
+.menu__hamburger {
+	background-color: transparent;
+	border: none;
+	outline: 0;
+	font-size: 28px;
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.menu__hamburger:hover {
+	color: var(--color-text);
+}
+
+.menu--fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #fff !important;
+	box-shadow: var(--dark-shadow) !important;
+}
+
+.menu--fixed a {
+	color: #000;
+}
+
+section {
+	height: 80vh;
+}
+
+#services {
+	background-color: #fff;
+}
+
+section h1 {
+	font-size: 42px;
+	text-transform: uppercase;
+	padding-top: 25px;
+	text-align: center;
+}
+
+section h1 span {
+	color: var(--color-text);
+}
+
+footer {
+	background-color: hsl(209, 61%, 16%);
+	padding: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+footer p {
+	text-align: center;
+	color: #fff;
+	text-transform: capitalize;
+	letter-spacing: var(--spacing);
+}
+
+.backUp {
+	cursor: pointer;
+	position: fixed;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	color: #fff;
+	right: 5%;
+	bottom: 10%;
+	width: 50px;
+	height: 50px;
+	font-size: 20px;
+	background-color: var(--color-text);
+	border-radius: 10px;
+	transition: var(--transition);
+	animation: animateBack infinite 1s;
+}
+
+@keyframes animateBack {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.3);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+/* media queries */
+@media only screen and (min-width: 800px) {
+	.menu {
+		background-color: transparent;
+		box-shadow: none;
+	}
+
+	.menu__list {
+		max-height: none;
+		display: flex;
+	}
+
+	.menu__link {
+		color: #fff;
+	}
+
+	.menu__link:hover {
+		padding-left: 10px;
+	}
+
+	.menu__hamburger {
+		display: none;
+	}
+
+	.menu__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
