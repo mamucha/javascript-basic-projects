@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/* variables */
+:root {
+	--bcg-grey: #f1f5f8;
+	--bcg-white: #fff;
+	--color-text: #1da1f2;
+	--transition: all 0.3s linear;
+	--spacing: 0.25rem;
+	--radius: 0.5rem;
+	--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	--max-width: 1170px;
+}
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	background-color: var(--bcg-grey);
+
+	/* height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center; */
+}
+
+/* Header Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	line-height: 1.2;
+}
+
+p,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/* main content */
+main {
+	display: grid;
+	place-items: center;
+	width: 100%;
+	min-height: 100vh;
+}
+
+.main__wrapper {
+	max-width: 1200px;
+	width: 90%;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.main__title {
+	display: grid;
+	place-items: center;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.main__title h1 {
+	margin-bottom: 15px;
+}
+
+.tab__img {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tab__img img {
+	max-height: 300px;
+	object-fit: cover;
+	border-radius: 10px;
+	width: 100%;
+}
+
+.tab__btn {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 50px;
+	margin-top: 20px;
+}
+
+.btn__box {
+	background-color: hsl(212, 33%, 89%);
+	outline: 0;
+	border: none;
+	text-transform: uppercase;
+	letter-spacing: var(--spacing);
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.btn__box--active {
+	background-color: #fff;
+}
+
+.btn__box:nth-child(1) {
+	border-top-left-radius: var(--radius);
+}
+
+.btn__box:nth-child(2) {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.btn__box:nth-child(3) {
+	border-top-right-radius: var(--radius);
+}
+
+.tab__text {
+	background-color: #fff;
+	display: none;
+	padding: 25px;
+	transition: var(--transition);
+	border-bottom-right-radius: var(--radius);
+	border-bottom-left-radius: var(--radius);
+}
+
+.tab__text h3 {
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+
+.tab__text p {
+	color: #8a8d91;
+	margin-bottom: 15px;
+	letter-spacing: 1px;
+}
+
+.tab__text--active {
+	display: flex;
+}
+
+/* media queries */
+@media only screen and (min-width: 1024px) {
+	.main__tab {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		place-items: start;
+		gap: 20px;
+	}
+
+	.tab__btn {
+		margin-top: 0;
+	}
+}
