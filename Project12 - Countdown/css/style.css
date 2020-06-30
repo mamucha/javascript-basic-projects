@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/* variables */
+:root {
+	--bcg-grey: #f1f5f8;
+	--bcg-white: #fff;
+	--color-text: #1da1f2;
+	--transition: all 0.3s linear;
+	--spacing: 0.25rem;
+	--radius: 0.5rem;
+	--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	--max-width: 1170px;
+}
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	background-color: var(--bcg-grey);
+
+	/* height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center; */
+}
+
+/* Header Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	line-height: 1.2;
+}
+
+p,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/* main content */
+main {
+	width: 100%;
+	min-height: 100vh;
+}
+
+.main__wrapper {
+	max-width: 1200px;
+	width: 90%;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.main__img {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.main__img img {
+	max-height: 300px;
+	object-fit: cover;
+	border-radius: 10px;
+	width: 100%;
+}
+
+.text__title {
+	text-transform: uppercase;
+	color: var(--color-text);
+	margin-bottom: 5px;
+}
+
+.text__subtitle {
+	font-weight: 700;
+}
+
+.text__desc {
+	margin: 25px 0;
+	letter-spacing: 1px;
+	color: hsl(209, 23%, 60%);
+}
+
+.timer__countdown {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.countdown__box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-transform: uppercase;
+	color: #fff;
+	width: 80px;
+	height: 80px;
+	background-color: var(--color-text);
+	border-bottom-left-radius: var(--radius);
+	border-top-right-radius: var(--radius);
+	margin-right: 20px;
+}
+
+.countdown__box h3 {
+	margin-bottom: 5px;
+}
+
+/* media queries */
+@media only screen and (min-width: 1024px) {
+	.main {
+		display: grid;
+		place-items: center;
+	}
+	.main__wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+}
