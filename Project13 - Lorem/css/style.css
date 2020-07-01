@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/* variables */
+:root {
+	--bcg-grey: #f1f5f8;
+	--bcg-white: #fff;
+	--color-text: #1da1f2;
+	--transition: all 0.3s linear;
+	--spacing: 0.25rem;
+	--radius: 0.5rem;
+	--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	--max-width: 1170px;
+}
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	background-color: var(--bcg-grey);
+
+	/* height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center; */
+}
+
+/* Header Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	line-height: 1.2;
+}
+
+p,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/* main content */
+main {
+	width: 100%;
+	min-height: 100vh;
+}
+
+.main__wrapper {
+	max-width: 1200px;
+	width: 90%;
+	margin: 0 auto;
+	padding: 50px 0;
+	display: grid;
+	place-items: center;
+	gap: 20px;
+}
+
+.main__lorem {
+	display: grid;
+	place-items: center;
+}
+
+.lorem__text p {
+	margin: 10px 0;
+}
+/* media queries */
+@media only screen and (min-width: 1024px) {
+	.main__wrapper {
+	}
+}
