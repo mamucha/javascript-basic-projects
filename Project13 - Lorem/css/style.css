@@ -68,13 +68,48 @@ main {
 	gap: 20px;
 }
 
+.main__title {
+	text-align: center;
+}
+
 .main__lorem {
 	display: grid;
 	place-items: center;
 }
 
+.lorem__form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+.lorem__form label {
+	letter-spacing: var(--spacing);
+	text-transform: uppercase;
+}
+
+.lorem__form input {
+	width: 10%;
+	border-radius: var(--radius);
+	text-align: center;
+	margin: 0 10px;
+}
+
+.lorem__btn {
+	color: #000;
+	background-color: var(--color-text);
+	border: none;
+	outline: 0;
+	border-radius: var(--radius);
+	padding: 5px;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
 .lorem__text p {
-	margin: 10px 0;
+	margin: 15px 0;
 }
 /* media queries */
 @media only screen and (min-width: 1024px) {

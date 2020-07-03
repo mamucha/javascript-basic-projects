@@ -18,7 +18,9 @@ const loremText = document.querySelector(".lorem__text");
 loremForm.addEventListener("submit", function (e) {
 	e.preventDefault();
 
-	if (loremAmount.value < 10) {
+	const value = parseInt(loremAmount.value);
+
+	if (!isNaN(value) && value < 10 && value > 0) {
 		let textElement = text
 			.slice(0, loremAmount.value)
 			.map((el) => `<p>${el}</p>`)
