@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/* variables */
+:root {
+	--bcg-grey: #f1f5f8;
+	--bcg-white: #fff;
+	--color-text: #1da1f2;
+	--transition: all 0.3s linear;
+	--spacing: 0.25rem;
+	--radius: 0.5rem;
+	--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	--max-width: 1170px;
+}
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	background-color: var(--bcg-grey);
+
+	/* height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center; */
+}
+
+/* Header Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	line-height: 1.2;
+}
+
+p,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/* main content */
+main {
+	width: 100%;
+	min-height: 100vh;
+}
+
+.main__wrapper {
+	max-width: 600px;
+	width: 90%;
+	background-color: #fff;
+	margin: 0 auto;
+	margin-top: 100px;
+	padding: 50px;
+	display: grid;
+	place-items: center;
+	gap: 20px;
+	box-shadow: var(--dark-shadow);
+	border-radius: var(--radius);
+}
+
+.main__title {
+	text-align: center;
+}
+
+.main__form {
+	width: 80%;
+}
+
+.form__list {
+	display: flex;
+	place-items: center;
+	margin-bottom: 20px;
+}
+
+.form__list input {
+	flex-grow: 1;
+	border-top-left-radius: var(--radius);
+	border-bottom-left-radius: var(--radius);
+	border-color: gray;
+	background-color: hsl(210, 36%, 96%);
+	border: none;
+	padding: 5px;
+}
+
+.form__btn {
+	padding: 5px;
+	background-color: var(--color-text);
+	color: #fff;
+	outline: 0;
+	border: none;
+	border-top-right-radius: var(--radius);
+	border-bottom-right-radius: var(--radius);
+	cursor: pointer;
+}
+
+.item__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.item__change {
+	width: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.item__change span {
+	cursor: pointer;
+}
+
+/* media queries */
