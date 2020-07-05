@@ -111,6 +111,7 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	margin-bottom: 15px;
 }
 
 .item__change {
@@ -122,6 +123,24 @@ main {
 
 .item__change span {
 	cursor: pointer;
+}
+
+.item__clear {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+
+.item__btn {
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: var(--spacing);
+	padding: 5px 10px;
+	border: none;
+	border-radius: var(--radius);
+	background-color: var(--color-text);
+	color: #fff;
 }
 
 /* media queries */
