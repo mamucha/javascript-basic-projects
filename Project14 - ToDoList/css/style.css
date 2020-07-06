@@ -76,6 +76,31 @@ main {
 	text-align: center;
 }
 
+.main__title--info {
+	opacity: 0;
+	margin-bottom: 10px;
+	padding: 10px;
+	color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
+	border-radius: var(--radius);
+	transition: var(--transition);
+	line-height: 24px;
+}
+
+.main__title--info span {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.add {
+	background-color: green;
+}
+
+.delete {
+	background-color: red;
+}
+
 .main__form {
 	width: 80%;
 }
@@ -123,6 +148,11 @@ main {
 
 .item__change span {
 	cursor: pointer;
+	transition: var(--transition);
+}
+
+.item__change span:hover {
+	color: var(--color-text);
 }
 
 .item__clear {
@@ -141,6 +171,11 @@ main {
 	border-radius: var(--radius);
 	background-color: var(--color-text);
 	color: #fff;
+	transition: var(--transition);
+}
+
+.item__btn:hover {
+	background-color: #000;
 }
 
 /* media queries */
