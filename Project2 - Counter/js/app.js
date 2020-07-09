@@ -35,6 +35,20 @@ const colorCount = () => {
 	}
 };
 
+document.onkeydown = function (e) {
+	switch (e.keyCode) {
+		case 37:
+			decrease();
+			break;
+		case 39:
+			increase();
+			break;
+		case 32:
+			resetCount();
+			break;
+	}
+};
+
 btnDec.addEventListener("click", decrease);
 btnInc.addEventListener("click", increase);
 btnReset.addEventListener("click", resetCount);

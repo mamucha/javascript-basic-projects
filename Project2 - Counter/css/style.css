@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
+/* variables */
+:root {
+	--bcg-grey: #f1f5f8;
+	--bcg-white: #fff;
+	--color-text: #1da1f2;
+	--transition: all 0.3s linear;
+	--spacing: 0.25rem;
+	--radius: 0.5rem;
+	--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	--max-width: 1170px;
+}
+
 /* Body Styles */
 body {
 	margin: 0;
@@ -23,9 +35,23 @@ h6 {
 /* main */
 main {
 	height: 100vh;
+	width: 90%;
+	margin: 0 auto;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.main__wrapper {
+	width: 100%;
+	max-width: 600px;
+	background-color: #fff;
+	padding: 30px;
+	border-radius: var(--radius);
+	box-shadow: var(--dark-shadow);
+	margin: 0 auto;
+	display: grid;
+	place-items: center;
 }
 
 .main__text {
@@ -92,5 +118,16 @@ main {
 
 	100% {
 		left: 0px;
+	}
+}
+
+@media only screen and (max-width: 475px) {
+	.main__btn {
+		display: grid;
+		gap: 20px;
+	}
+
+	.main__text h1 {
+		font-size: 48px;
 	}
 }
