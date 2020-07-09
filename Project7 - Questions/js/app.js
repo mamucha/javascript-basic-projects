@@ -1,33 +1,15 @@
-const btn = document.querySelectorAll(".question__button");
-
 const questions = document.querySelectorAll(".question");
 
-btn.forEach(function (elem) {
-	elem.addEventListener("click", function () {
-		if (
-			document.querySelector(".question__answer--open") &&
-			document.querySelector(".hide")
-		) {
-			document
-				.querySelector(".question__answer--open")
-				.classList.toggle("question__answer--open");
-			document.querySelector(".hide").classList.toggle("hide");
-		}
+questions.forEach(function (question) {
+	const btn = question.querySelector(".question__button");
 
-		this.parentElement.nextElementSibling.classList.toggle(
-			"question__answer--open"
-		);
+	btn.addEventListener("click", function () {
+		questions.forEach(function (item) {
+			if (item !== question) {
+				item.classList.remove("open");
+			}
+		});
 
-		this.children[0].classList.toggle("hide");
+		question.classList.toggle("open");
 	});
 });
-
-// all div open. not hide
-// btn.forEach((el) =>
-// 	el.addEventListener("click", function () {
-//
-// 		this.parentElement.nextElementSibling.classList.toggle(
-// 			"question__answer--open"
-// 		);
-// 	})
-// );

@@ -110,7 +110,7 @@ ul {
 	overflow: hidden;
 }
 
-.question__answer--open {
+.open .question__answer {
 	max-height: 200px;
 	padding: 20px 0;
 	margin-top: 15px;
