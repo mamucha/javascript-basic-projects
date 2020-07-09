@@ -41,7 +41,7 @@ body {
 	&__title {
 		@include size(100%, 25vh);
 		@include flex_center();
-		@include position($position: fixed, $top: 0, $left: 0);
+		@include position($position: fixed, $display: flex, $top: 0, $left: 0);
 		z-index: 2;
 		background-color: $bcg-white;
 		box-shadow: $dark-shadow;
@@ -55,9 +55,9 @@ body {
 	}
 
 	&__projects {
-		@include size(90%, 100vh);
+		@include size(90%, 100%);
 		@include grid_center();
-		margin: 30vh auto;
+		margin: 30vh auto 5vh auto;
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		gap: 20px;
 	}
@@ -112,6 +112,7 @@ body {
 		color: $bcg-white;
 		text-transform: uppercase;
 		opacity: 0;
+		z-index: -1;
 		transition: $transition;
 		transform: translate(-50%, 100%);
 	}
