@@ -34,7 +34,7 @@ main {
 
 .main__wrapper {
 	max-width: 600px;
-	width: 100%;
+	width: 90%;
 	display: grid;
 	justify-items: center;
 }
